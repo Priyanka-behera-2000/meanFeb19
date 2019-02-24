@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Express App</title>
+    <% include resources %>
+</head>
+<body>
+
+    <div class="container">
+            <% include header %>
+        <div class="row">
+           <div class="col-12">
+            <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th><th>Brand</th><th>Price</th><th>Action</th>
+                </tr>
+            </thead>    
+            <tbody>
+                <% products.forEach((product)=>{
+                %>   
+                <tr>
+                <td> <%= product.name %> </td>
+                <td><%= product.brand %></td>
+                <td><%= product.price %></td>
+                <td>
+                    <a href="edit?id=<%= product._id %>">edit</a>&nbsp;&nbsp;
+                    <a href="delete?id=<%= product._id %>">delete</a>
+                </td>
+                </tr>
+                <%
+                });
+                %>
+
+            </tbody>
+            </table>
+             
+              <a href="/">Home</a><br/>
+            </div>   
+        </div><hr/>
+        <% include footer %>
+    </div>
+</body>
+</html>
+
+

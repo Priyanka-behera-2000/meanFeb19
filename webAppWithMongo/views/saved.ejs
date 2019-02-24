@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Express App</title>
+    <% include resources %>
+</head>
+<body>
+
+    <div class="container">
+            <% include header %>
+        <div class="row">
+           <div class="col-12">
+            <div class="alert alert-success">
+                <h1> <%= product.name %> is successfully saved.</h1>
+            </div>
+              <a href="products">View Products</a><br/>
+              <a href="/">Home</a><br/>
+            </div>   
+        </div><hr/>
+        <% include footer %>
+    </div>
+</body>
+</html>
+
+
